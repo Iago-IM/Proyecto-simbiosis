@@ -268,6 +268,23 @@ enlazar a los términos de esta sección, pero no los definirá de nuevo.
 
 | Término | Definición en Proyecto Simbiosis | Fuente |
 | --- | --- | --- |
+| **Acreditación profesional** | Documentación oficial en formato PDF (máximo 10 MB) que deben adjuntar de forma obligatoria durante el registro los profesionales de la salud para certificar su titulación y solicitar permisos de publicación profesional. | Entrevista UR-01 |
+| **Alias (Nombre de usuario)** | Nombre público y único asignado al usuario para participar en foros y comentarios, protegiendo su identidad real. Debe tener como mínimo 3 caracteres, sin espacios (admite guion y guion bajo). | Entrevista UR-01 |
+| **Alerta automática** | Notificación del sistema que se dispara cuando un dato fisiológico o de laboratorio supera un umbral crítico. Incluye un mensaje que sugiere explícitamente buscar atención médica si el estado persiste y queda registrada en el historial. | Entrevista UR-05 |
+| **Autorización de acceso** | Permiso explícito y revocable otorgado por el paciente a profesionales de la salud concretos para visualizar sus datos médicos, condicionado a que el profesional esté verificado por correo e identificación única/colegiado. | Entrevista UR-05 |
+| **Datos fisiológicos** | Conjunto de constantes corporales (peso en kg, altura, presión arterial sistólica y diastólica en mmHg, frecuencia cardíaca en lpm y temperatura corporal en ºC) introducidas manualmente por el paciente mediante unidades predeterminadas. | Entrevista UR-05 |
+| **Historial de datos de salud** | Registro cronológico (de más reciente a más antiguo) de todas las mediciones fisiológicas y analíticas del paciente, accesible desde su perfil, con capacidad de filtrado, visualización gráfica y exportación (PDF y CSV). | Entrevista UR-05 |
+| **Intento de registro** | Estado provisional en el que se encuentra la cuenta desde que el usuario envía el formulario inicial de alta hasta que confirma su dirección mediante el enlace de verificación enviado por correo electrónico. | Entrevista UR-01 |
+| **Marca de tiempo del registro** | Momento exacto en el que el usuario hace clic en el enlace de verificación y el sistema confirma el alta. Se almacena internamente en UTC y se visualiza adaptado a la zona horaria local del usuario. | Entrevista UR-01 |
+| **Nombre completo** | Nombre y apellidos reales del usuario facilitados durante el registro para la gestión interna de la cuenta. No es visible para otros usuarios en la plataforma ni en el foro. | Entrevista UR-01 |
+| **Nota diaria (Contexto)** | Texto libre corto (máximo 500 caracteres, con contador en tiempo real) adjunto a un registro o medición para aportar contexto relevante (p. ej., "en ayunas") o describir síntomas puntuales. | Entrevista UR-05 |
+| **Parámetro de laboratorio** | Resultado de analíticas clínicas (p. ej., glucosa, colesterol, ferritina, PCR) introducido de forma manual indicando fecha/hora, valor numérico y selección obligatoria de la unidad de medida desde una lista predefinida. | Entrevista UR-05 |
+| **Nutricionista** | Perfil de usuario (médicos o nutricionistas, profesionales de la salud) que, tras adjuntar su acreditación profesional en el registro y superar una revisión manual por parte del equipo, obtiene acceso a funcionalidades avanzadas de publicación profesional. | Entrevista UR-01 |
+| **Recordatorio interno** | Aviso visual dentro de la plataforma (tarjetas en el panel o alertas en interfaz) configurado en el perfil del paciente con frecuencia diaria, semanal o mensual por tipo de dato, para evitar olvidos de toma de mediciones. | Entrevista UR-05 |
+| **Registro completado (Cuenta activa)** | Estado definitivo que se alcanza cuando el usuario confirma su correo dentro del plazo de validez del enlace (24 horas). Habilita el acceso completo a la plataforma según el tipo de usuario. | Entrevista UR-01 |
+| **Umbral crítico** | Límite numérico límite (general o personalizado por el médico para un paciente específico) que, de ser superado por una medición, desencadena la generación de una alerta automática. | Entrevista UR-05 |
+| **Usuario general (Usuario normal)** | Rol por defecto asignado a todo usuario registrado. Incluye también a los profesionales de la salud cuya acreditación en PDF aún no ha sido revisada y aprobada. | Entrevista UR-01 |
+| **Vinculación de cuentas** | Unificación automática del acceso mediante proveedor externo (Google) con una cuenta registrada localmente (correo/contraseña), siempre que ambas compartan la misma dirección de correo electrónico. | Entrevista UR-01 |
 
 ## 10. Modelos de análisis
 
