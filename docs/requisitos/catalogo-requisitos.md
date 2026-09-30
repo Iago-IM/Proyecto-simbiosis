@@ -279,6 +279,10 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
+| NFR-08| NFR-Q (Disponibilidad)| La plataforma deberá funcionar 24h al día, con una disponibilidad mínima del 99.5%| G| -| La disponibilidad se medirá mediante una comprobación automática realizada cada cinco minutos desde un sistema externo a la plataforma, y una comprobación se considerará fallida cuando no sea posible acceder a la plataforma o utilizar sus funciones principales.| -|
+| NFR-09???| NFR-R| La plataforma eliminará las cuentas de cuidadores que no tengan asociado ningún paciente durante un año| L| -| 
+| NFR-10| NFR-I| La plataforma deberá cumplir las Pautas de Accesibilidad para el Contenido Web, WCAG 2.2, con nivel de conformidad AA. | G| -| La accesibilidad se evaluará antes de aceptar la primera versión y después de cualquier cambio importante en la interfaz, combinando una herramienta automática y una revisión manual.| -|
+| NFR-11| NFR-Q(calidad de uso)| El acceso a la plataforma se realizará mediante una interfaz web responsiva, sin que sea necesario instalar una aplicación móvil nativa ni una aplicación de escritorio independiente en el dispositivo de la persona usuaria.| G| -| -| -|
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
