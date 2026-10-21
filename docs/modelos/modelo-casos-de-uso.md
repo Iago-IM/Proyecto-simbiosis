@@ -235,11 +235,12 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 **Escenario principal de éxito:** 
 1. El sistema muestra los datos actuales: nombre completo, el teléfono, la dirección postal, las preferencias dietéticas, el alias y el correo electrónico, siendo los dos últimos no modificables.
-2. El usuario modifica el valor de los datos modificables mostrados. El formato de los datos es el mismo que en el registro.
+2. El usuario modifica el valor de los datos modificables mostrados y las preferencias  . El formato de los datos es el mismo que en el registro.
 3. El usuario solicita guardar los cambios.
 4. El sistema confirma la validez de los datos
 5. El sistema guarda los datos actualizados.
 6. El sistema confirma la actualización al usuario.
+7. Finaliza el caso de uso.
 
 
 **Extensiones (flujos alternativos):** 
@@ -261,25 +262,42 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
 
+Los datos quedan actualizados
+
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Obtener una serie de recetas que cumplen con los criterios de búsqueda
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** usuario
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** el usuario solicita buscar recetas
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** 
+1. El sistema muestra una interfaz que permite seleccionar los ingredientes a mostrar y los ingredientes excluidos. Los ingredientes disponibles para seleccionar son los dictados por el sistema.
+2. El ususario selecciona su preferencia.
+3. El sistema comprueba posibles conflictos entre los ingredientes a buscar y los excluídos.
+4. El sistema permite introducir texto para afinar la búsqueda.
+5. El usuario introduce o no texto y solicita ejecutar la búsqueda
+6. El sistema busca las recetas que cumplen los requisitos y las muestra en pantalla con una vista previa de cada receta (que incluye título, imagen, calificación promedio y descripción breve).
+7. El usuario selecciona un resultado
+8. El sistema muestra la receta seleccionada en detalle. El detalle muestra título, imagen si existe, ingredientes, instrucciones de preparación, tiempo de cocción, número de porciones, alias de quien la publicó e insignia de validación.
+9. El usuario vuelve a los resultados--> vuelta al paso 6.
 
 **Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** 
+1. El sistema no encuentra ningún resultado que se ajuste a los criterios:
+   El sistema indica que no hay resultados para esa búsqueda. Conserva los criterios para que la persona pueda modificarlos.
+   ...
+3. Fallo de la consulta:
+   Si el sistema no puede completar la búsqueda o cargar el detalle, informa del problema. No presenta el fallo como una búsqueda sin resultados. 
+Se conservan los criterios de la última búsqueda. La persona puede reintentar la consulta o terminarla.
 
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
 
