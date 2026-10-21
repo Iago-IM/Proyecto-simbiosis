@@ -223,19 +223,41 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05 — Actualizar perfil
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Permitir al usuario la actualización de información personal y preferencias
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** usuario registrado
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario está registrado y con la sesión iniciada
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario entra en la sección de actualizar el perfil
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1. El sistema muestra los datos actuales: nombre completo, el teléfono, la dirección postal, las preferencias dietéticas, el alias y el correo electrónico, siendo los dos últimos no modificables.
+2. El usuario modifica el valor de los datos modificables mostrados. El formato de los datos es el mismo que en el registro.
+3. El usuario solicita guardar los cambios.
+4. El sistema confirma la validez de los datos
+5. El sistema guarda los datos actualizados.
+6. El sistema confirma la actualización al usuario.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+
+**Extensiones (flujos alternativos):** 
+  *1 Los campos "nombre completo" o "teléfono" no están cubiertos:
+  Se notifica al usuario que los campos no cubiertos son obligatorios. No se permite guardar los cambios hasta que se cumpla esta condición.
+  El flujo vuelve al paso 3, conservando los campos introducidos sin guardar los cambios.
+
+  *2 Dato erróneo identificado:
+  Si un dato no es válido, el sistema identifica el campo y explica qué debe corregirse.  No se permite guardar los cambios hasta que se corrija el error.
+  El flujo vuelve al paso 3, conservando los campos introducidos sin guardar los cambios.
+
+  *3 El usuario cancela la operación antes de guardar los cambios:
+  El sistema descarta los cambios no guardados. Fin del caso de uso.
+
+  *4 El sistema no puede guardar los cambios:
+  El sistema informa al usuario del problema y no confirma la actualización.
+  El flujo vuelve al paso 3, conservando los campos introducidos sin modificar los datos guardados.
+
 
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
 
