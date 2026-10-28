@@ -3,7 +3,7 @@
 | Campo | Valor |
 | --- | --- |
 | Proyecto | Proyecto Simbiosis |
-| Fecha | [dd/mm/aaaa] |
+| Fecha | [28/10/2026] |
 | Versión | [Versión de trabajo] |
 | Estado | Borrador |
 
@@ -15,7 +15,7 @@
 
 ## Épica de búsqueda
 
-Como [rol], quiero [capacidad amplia], para [beneficio].
+Como usuario, quiero buscar recetas, para encontrar recetas que se ajusten a mis preferencias.
 
 **Estado:** descompuesta en US-01, US-02 y US-03. Conserva la necesidad conjunta.
 
@@ -25,44 +25,44 @@ Como [rol], quiero [capacidad amplia], para [beneficio].
 
 ## US-01
 
-**Título:** [Capacidad]
+**Título:** Buscar mediante una palabra o frase
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario, quiero poder filtrar recetas por palabra o frase, para agilizar la búsqueda de recetas.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado un usuario que está filtrando recetas, cuando introduce una palabra o frase para filtrar recetas, entonces se muestran todas las que tengan ese texto, sin diferenciar las mayúsculas de las minúsculas.
+- **CA-02.** Dado un usuario que está filtrando recetas, cuando introduce un texto que no contiene ninguna receta, entonces el sistema indica que no hay resultados para esa búsqueda y mantiene los criterios para que puedan ser modificados.
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## US-02
 
-**Título:** [Capacidad]
+**Título:** Buscar por ingredientes incluidos
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario, quiero filtrar recetas por los ingredientes que incluyen, para encontrar recetas que se adecuen a mis preferencias.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado un usuario que busca recetas, cuando filtra por ingredientes incluidos, dentro de las opciones de ingredientes que tiene, entonces el sistema muestra recetas que contengan esos ingredientes.
+- **CA-02.** Dado un usuario que está buscando recetas, cuando filtra por ingredientes incluidos un ingrediente marcado como excluido, entonces el sistema muestra el conflicto y no se ejecuta la búsqueda hasta que se corrija.
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## US-03
 
-**Título:** [Capacidad]
+**Título:** Excluir ingredientes
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario quiero excluir ingredientes de mi búsqueda para buscar recetas que se ajusten a mis preferencias.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado un usuario que busca recetas, cuando selecciona ingredientes a excluir, entonces el sistema muestra recetas que no contengan esos ingredientes.
+- **CA-02.** Dado un usuario que busca recetas, cuando selecciona ingredientes a excluir de forma que no haya recetas que no contengan alguno de los ingredientes, entonces el sistema indica que no hay resultados para esa búsqueda y mantiene los criterios para que puedan ser modificados.
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## Revisión INVEST
